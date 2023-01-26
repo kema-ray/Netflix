@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 import uuid
 # Create your models here.
 class CustomUser(AbstractUser):
-    profiles = models.ManyToManyField('Profiles', null= True, blank=True)
+    profiles = models.ManyToManyField('Profile', related_name='profiles')
 
 AGE_CHOICES = (
     ('All','All'),
